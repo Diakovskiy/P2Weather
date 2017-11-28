@@ -62,9 +62,4 @@ public class WeatherInfoViewModel extends BaseObservable {
         context.startActivity(intent);
     }
 
-    public void onShowSettings(){
-        Intent intent = new Intent(context, SettingsActivity.class);
-        context.startActivity(intent);
-    }
-
 }

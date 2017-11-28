@@ -24,14 +24,6 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{() -> viewModel.onShowHistory()}"
                 android:text="History" />
-
-            <Button
-                android:id="@+id/btnSettings"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:onClick="@{view -> viewModel.onShowSettings()}"
-                android:text="Settings" />
-
         </LinearLayout>
 
         <TextView

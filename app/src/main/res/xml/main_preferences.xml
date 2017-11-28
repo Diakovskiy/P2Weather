@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="WEATHER_API_KEY"
+        android:summary="Key for OpenWeatherMap AOU"
+        android:title="Weather API key">
+    </EditTextPreference>
+
+    <EditTextPreference
+        android:key="DATA_UPDATE_INTERVAL"
+        android:summary="data update interval"
+        android:title="data update interval">
+    </EditTextPreference>
+
+    <CheckBoxPreference
+        android:key="UPDATE_DATA_IN_ACTIVE_WINDOW"
+        android:summary="Update data in active window"
+        android:title="Update data in active window">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:key="UPDATE_DATA_IN_BACKGROUND"
+        android:summary="Update data in background"
+        android:title="Update data in background">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:key="AUTOSTART_UPDATE_DATA_SERVICE"
+        android:summary="Autostart update data service"
+        android:title="Autostart update data service">
+    </CheckBoxPreference>
+
+</PreferenceScreen>

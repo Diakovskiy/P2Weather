@@ -6,6 +6,8 @@ import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.diakovskiy.weatherapp2017.databinding.ActivityWeatherBinding;
@@ -26,4 +28,11 @@ public class WeatherActivity extends AppCompatActivity {
         binding.setViewModel(weatherInfoViewModel);
 
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuItem mi = menu.add(0, 1, 0, "Preferences");
+        mi.setIntent(new Intent(this, SettingsActivity.class));
+        return super.onCreateOptionsMenu(menu);
+    }
+
 }
