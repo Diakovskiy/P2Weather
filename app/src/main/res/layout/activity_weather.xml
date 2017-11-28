@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="viewModel" type="com.diakovskiy.weatherapp2017.viewmodel.WeatherInfoViewModel"/>
+    </data>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.onRefreshWeather()}"
+                android:text="Refresh" />
+
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> viewModel.onShowHistory()}"
+                android:text="History" />
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="@{view -> viewModel.onShowSettings()}"
+                android:text="Settings" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTemperatureDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.temperatureDescription}" />
+
+        <TextView
+            android:id="@+id/tvHumidityDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.humidityDescription}" />
+
+
+
+
+    </LinearLayout>
+</layout>
+
